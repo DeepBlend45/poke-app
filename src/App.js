@@ -27,6 +27,7 @@ function App() {
       setPokemon({
         name: data.name,
         image: data.sprites.front_default,
+        imageShiny: data.sprites.front_shiny,
       });
       setError("");
     } catch (e) {
@@ -52,7 +53,7 @@ function App() {
         <div>
           <h2>{pokemon.name}</h2>
           <img src={pokemon.image} alt={pokemon.name} />
-        </div>
+          <img src={pokemon.imageShiny} alt={pokemon.name} /></div>
       )}
     </div>
   );
